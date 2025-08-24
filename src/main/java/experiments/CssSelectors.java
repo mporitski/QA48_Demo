@@ -12,6 +12,7 @@ public class CssSelectors {
     @Test
     public void selectorsHomePage() {
         driver.get("https://demoqa.com/");
+        //driver.navigate().to("https://demoqa.com/");
         driver.manage().window().maximize();
         WebElement footer = driver.findElement(By.tagName("footer"));
         System.out.println(footer.getTagName());
@@ -32,7 +33,10 @@ public class CssSelectors {
         btnImpressive.click();
         pause(1);
 
-        WebElement btnButtons = driver.findElement(By.cssSelector("li[id='item-4']"));
+        //WebElement btnButtons = driver.findElement(By.id("item-4");
+        //WebElement btnButtons = driver.findElement(By.cssSelector("li[id='item-4']"));
+        WebElement btnButtons = driver.findElement(By.cssSelector("li:nth-child(5)"));
+
         btnButtons.click();
         pause(1);
 
@@ -41,7 +45,6 @@ public class CssSelectors {
         WebElement btnDoubleClick = driver.findElement(By.cssSelector("button[id='doubleClickBtn']"));
         btnDoubleClick.click();
         pause(1);
-
 
         //driver.close();
         driver.quit();
