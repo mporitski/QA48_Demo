@@ -1,4 +1,4 @@
-package emums;
+package enums;
 
 public enum Gender {
     MALE("//label[@for='gender-radio-1']"),
