@@ -59,6 +59,10 @@ public class PracticeFormPage extends BasePage{
         return validateTextInElement(modalMessage, "Thanks for submitting the form");
     }
 
+    public boolean validateModalMessageNegative(){
+        return validateTextInElement(modalMessage, "Wrong message!");
+    }
+
 
     public void typePracticeForm(Student student){
         hideBanner();
@@ -70,8 +74,11 @@ public class PracticeFormPage extends BasePage{
         inputMobile.sendKeys(student.getMobile());
         //inputDateOfBirth.sendKeys(student.getDateOfBirth());
         typeDateOfBirth(student.getDateOfBirth());
+        pause(1);
         typeSubjects(student.getSubject());
+        pause(1);
         typeHobbies(student.getHobbies());
+        pause(1);
         textAreaAddress.sendKeys(student.getAddress());
         typeStateCity(student.getState(), student.getCity());
         btnSubmit.click();
