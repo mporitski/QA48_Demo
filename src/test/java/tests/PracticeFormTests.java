@@ -20,7 +20,7 @@ public class PracticeFormTests extends AppManager {
 
     SoftAssert softAssert  = new SoftAssert();
 
-    @Test
+    @Test(groups = "smoke")
     public void studentRegFormPositiveTest() {
         List<Hobbies> hobbies = new ArrayList<>();
         hobbies.add(Hobbies.MUSIC);
@@ -42,7 +42,7 @@ public class PracticeFormTests extends AppManager {
 
     }
 
-    @Test
+    @Test(groups = "smoke")
     public void studentRegFormPositiveTestValidateSoftAssert() {
         List<Hobbies> hobbies = new ArrayList<>();
         hobbies.add(Hobbies.MUSIC);
